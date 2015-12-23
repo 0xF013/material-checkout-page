@@ -1,0 +1,331 @@
+<!doctype html>
+<html>
+    <head>
+      <meta charset="utf-8">
+      <title>Material Checkout</title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+      <link rel="stylesheet" href="dist/style.css">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+    <body>
+      <script type="text/javascript">
+        $(document).ready(function() {
+            $('select').material_select();
+             $(".button-collapse").sideNav();
+        });        
+      </script>
+      
+        <nav role="navigation">
+          <div class="nav-wrapper container">
+            <a href="#" class="brand-logo left">ibattz</a>
+            <a href="#" data-activates="mobile_menu" class="button-collapse right"><i class="material-icons">menu</i></a>
+            <ul id="navbar-links" class="hide-on-med-and-down left">
+              <li><a href="#">Power</a></li>
+              <li><a href="#">Protection</a></li>
+            </ul>   
+            <ul class="right hide-on-med-and-down">
+              <li><a href="#"><i class="material-icons">search</i></a></li>
+              <li><a href="#"><i class="material-icons">perm_identity</i></a></li>
+              <li class="active">
+                <a href="#">
+                  <i class="material-icons">shopping_cart</i>
+                  <span class="badge cart-count">1</span>
+                </a>
+              </li>
+            </ul>
+            <ul class="side-nav" id="mobile_menu">
+              <li><a href="#">Power</a></li>
+              <li><a href="#">Protection</a></li>
+              <li><a href="#">Search</a></li>
+              <li><a href="#">Profile</a></li>      
+              <li class="active"><a href="#">Shopping Cart</a></li>    
+            </ul>
+          </div>
+        </nav>
+        <div class="container checkout-container">
+          <h1>Checkout</h1>
+          
+          <div class="billing-info">
+            <div class="billing-info-header">
+              <h2 class="left">
+                <span class="ordering-number">01</span>
+                Billing Information
+              </h2>
+              <div class="login-proposal right">
+                Have an account?
+                <a class="waves-effect waves-light btn">Login</a>
+              </div>
+            </div>
+            <div class="col s12">
+              <div class="row">
+                <div class="input-field col l6 s12">
+                  <input id="first_name" type="text" placeholder="" />
+                  <label for="first_name" class="active">First Name</label>
+                </div>
+                
+                <div class="input-field col l6 s12">
+                  <input id="last_name" type="text" placeholder="" />
+                  <label for="last_name" class="active">Last Name</label>
+                </div>              
+              </div>
+              <div class="row">
+                <div class="input-field col sl6 s12">
+                  <input id="address" type="text" placeholder="" />
+                  <label for="address" class="active">Address</label>
+                </div>
+                
+                <div class="input-field col sl6 s12">
+                  <input id="appartment" type="text" placeholder="" />
+                  <label for="appartment" class="active">Suite / Appartment <sup>optional</sup> </label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col l4 s12">
+                  <input id="city" type="text" placeholder="" />
+                  <label for="city" class="active">City</label>
+                </div>
+                
+                <div class="input-field col l2 s12">
+                  <input id="zipcode" type="text" placeholder="" />
+                  <label for="zipcode" class="active">Zip Code</label>
+                </div>  
+                
+                <div class="input-field col l3 s12">
+                  <select>
+                    <option selected>Alto Parana</option> 
+                  </select>
+                  <label class="">Country</label>
+                </div>         
+                <div class="input-field col l3 s12">
+                  <select>
+                    <option selected>Alto Parana</option> 
+                  </select>
+                  <label class="">State / Province</label>
+                </div>                
+              </div>
+              <div class="row">
+                <div class="input-field col l6 s12">
+                  <input id="phone_number" type="text" placeholder="" />
+                  <label for="phone_number" class="active">Telephone <sup>numbers only</sup> </label>
+                </div>  
+                
+                <div class="input-field col l6 s12">
+                  <input id="email" type="text" placeholder="" />
+                  <label for="email" class="active">Email Address</label>
+                </div>
+              </div> 
+              <div class="row">
+                <div class=" col s12">
+                  <input type="checkbox" class="filled-in" id="same_billing_address" />
+                  <label for="same_billing_address">My delivery and billing addresses are the same.</label>          
+                </div>
+              </div>
+              <div class="row">
+                <div class="col s12">
+                  <input type="checkbox" class="filled-in" id="subscribe" checked="checked" />
+                  <label for="subscribe">I wish to subscribe to the ibattz Global Online Store newsletter</label>              
+                </div>
+              </div>            
+            </div>
+          </div>
+        
+          <div class="shipping-method">
+            <h2><span class="ordering-number">02</span> Shipping Method</h2>
+            <div class="col s12">
+              <div class="row">
+                <div class=" col l6 m12">
+                  <input type="checkbox" class="filled-in" id="express" />
+                  <label for="express">
+                    <strong>Express F:</strong>
+                    2-9 Business Days
+                    <br />
+                    $64.00
+                  </label>              
+                </div>
+                <div class="col l6 m12">
+                  <input type="checkbox" class="filled-in" id="standard" />
+                  <label for="standard">
+                    <strong>Standard G:</strong>
+                    6-16 Business Days
+                    <br />
+                    $16.00
+                  </label>              
+                </div>              
+              </div>
+            </div>
+          </div>
+        
+          <div class="payment-method">
+            <h2><span class="ordering-number">03</span> Payment Method</h2>
+            <div class="col s12">
+              <div class="row">
+                <div class="col l6 s12 paypal-wrapper">
+                  <input type="checkbox" class="filled-in" id="paypal" />
+                  <label for="paypal">Paypal</label>              
+                </div>
+                <div class="col l6 s12">
+                  <div class="cc-wrapper">
+                    <div class="checkbox-tab">
+                      <input type="checkbox" class="filled-in" id="credit_card" />
+                      <label for="credit_card">Credit Card</label>
+                    </div>
+                    
+                    <div class="cc-tab-content disabled-form">
+                      <div class="row">
+                        <div class="input-field col l8 s12">
+                          <select disabled>
+                            <option selected>Visa</option> 
+                          </select>
+                          <label class="">Credit Card Type</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col l8 s12">
+                          <input disabled id="card_number" type="text" placeholder="" />
+                          <label for="card_number" class="active">Card number</label>
+                        </div>  
+                        
+                        <div class="input-field col l4 s12">
+                          <span class="help">?</span>
+                          <input disabled id="cvv" type="text" placeholder="" />
+                          <label for="cvv" class="active">CVV/CVN</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s6">
+                          <select disabled>
+                            <option selected>Month</option> 
+                          </select>
+                          <label class="">Expiration date</label>
+                        </div>   
+                        <div class="input-field col s6">
+                          <select disabled>
+                            <option selected>Year</option> 
+                          </select>
+                        </div>                            
+                      </div>
+                    </div>
+                  </div>
+                </div>           
+              </div>
+            </div>
+          </div> 
+          <div class="order-confirmation">
+            <h2><span class="ordering-number">04</span> Confirm Order</h2>
+            <table class="responsive-table">
+              <thead>
+                <tr>
+                  <th class="product-image-header"></th>
+                  <th class="product-name-header">Product</th>
+                  <th>Quantity</th>
+                  <th>Unit Price</th>
+                  <th>Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <img class="hide-on-med-and-down" src="http://www.ibattz.com/images/mojo-refuel-aqua-s-image-01" alt="product image" title="mojo removable case" />
+                  </td>
+                  <td>
+                    <div>Mojo Refuel Aqua S Battery Case for iPhone 5/5s</div>
+                    <div class="sku">IB-RF5-2E</div>
+                  </td>
+                  <td>
+                    <div class="input-field">
+                      <select >
+                        <option selected>1</option> 
+                      </select>
+                    </div>
+                  </td>
+                  <td>$74.95</td>
+                   <td>$74.95</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="row">
+              <div class="col s6 offset-s6 summary">
+                <div class="row">
+                  <div class="col s7 offset-s5">
+                    <ul>
+                      <li>Subtotal: $74.95</li>
+                      <li>Shipping: $88.00</li>
+                      <li class="total">Total: $162.95</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col l7 offset-l5 buttons s12">
+                <a class="waves-effect waves-light btn-large cancel">Cancel</a>
+                <a class="waves-effect waves-light btn-large confirm">Confirm order</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer class="page-footer">
+        <div class="band">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h3>Stay connected</h3>
+                <ul>
+                  <li><i class="material-icons ">hd</i></li>
+                  <li><i class="material-icons ">hd</i></li>
+                  <li><i class="material-icons ">hd</i></li>
+                </ul>
+              </div>
+              <div class="col l6 s12">
+                <h3>Sign up for news and offers</h3>
+                <div class="row">
+                  <div class="input-field col l8 s12">
+                    <input id="email_sub" type="text" placeholder="Your Email" />
+                  </div>
+                  <div class="input-field col l4 s12">
+                    <a class="waves-effect waves-light btn">Subscribe</a>
+                  </div>                
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="underfooter">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12 sublogo">
+                ibattz
+              </div>
+              <div class="col l3 s12 links">
+                <h5>Company</h5>
+                <ul>
+                  <li><a href="#">About us</a></li>
+                  <li><a href="#">Where to buy</a></li>
+                  <li><a href="#">Sales/Product Enquiries</a></li>
+                  <li><a href="#">Product registration</a></li>
+                  <li><a href="#">Support</a></li>
+                </ul>
+              </div>
+              <div class="col l3 s12 links">
+                <h5>Information</h5>
+                <ul>
+                  <li><a href="#">About us</a></li>
+                  <li><a href="#">Where to buy</a></li>
+                  <li><a href="#">Sales/Product Enquiries</a></li>
+                  <li><a href="#">Product registration</a></li>
+                  <li><a href="#">Support</a></li>
+                </ul>                
+              </div>              
+            </div>
+            <div class="row">
+              <div class="copyright col l6 offset-l6 s12">Copyright 2014 ibattz yada yada yada</div>
+            </div>
+          </div>
+        </div>
+      </footer>      
+    </body>
+</html>

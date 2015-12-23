@@ -1,0 +1,200 @@
+$roboto-font-path: "fonts/roboto/"
+$icons-font-path: ".fonts/material-design-icons"
+$primary-color: #f0f0f0
+$navbar-font-color: #000
+$secondary-color: #FF5900
+$tertiary-color: #c0c0c0
+$radio-empty-color: $secondary-color
+
+
+@import './node_modules/materialize-css/sass/materialize.scss'
+.nav-wrapper
+  .brand-logo
+    font-weight: 600
+  #navbar-links
+    margin-left: 15rem
+    a
+      font-size: 1.4rem
+    
+  .cart-count
+    background-color: $secondary-color
+    position: absolute
+    color: #fff
+    top: 0.8rem
+    right: 0.6rem
+    min-width: 1.4rem
+    height: 1.4rem
+    border-radius: 1rem
+    padding: 0.7rem 0.1rem 0.1rem 0.1rem
+    font-size: 0.7rem
+
+.checkout-container
+  margin-top: 3rem
+  h1
+    font-size: 2.1rem
+    font-weight: 400
+  h2
+    font-size: 1.6rem
+    margin-bottom: 1.5rem
+    .ordering-number
+      color: $secondary-color
+      font-weight: 800
+  .billing-info-header
+    margin-bottom: 2rem
+    .login-proposal
+      margin-top: 1.5rem
+      .btn
+        margin-left: 2rem
+        color: $secondary-color
+        background-color: #fff
+        outline: 2px solid $secondary-color
+    &:after
+      clear: both
+      content: ""
+      display: block      
+  > div
+    border-top: $primary-color 1px solid
+    margin-top: 1.5rem
+    & + div
+      margin-top: 6rem     
+    input[type=text]
+      border: none
+      box-sizing: border-box
+      padding: 0 1rem 0 1rem
+      background-color: $primary-color
+    label, label.active
+      top: 0.25rem
+      color: #000
+      font-size: 1rem
+      font-weight: 500
+      sup
+        font-weight: normal
+        color: $tertiary-color
+        margin-left: 0.3rem
+      strong
+        font-weight: 800
+    .select-wrapper 
+      .caret
+        z-index: 1
+        right: 5px
+      & ~ label, .select-wrapper ~ label.active
+        top: -1.75rem
+      :disabled
+        border-bottom: none
+  .shipping-method label
+    font-size: 1.1rem
+  .paypal-wrapper
+    min-height: 4rem
+  .cc-wrapper
+    margin-top: -1rem
+    .checkbox-tab
+      height: 3rem
+      display: inline-block
+      border: 1px solid $primary-color
+      border-bottom: 1px solid #fff
+      padding: 1rem 1.2rem 2.2rem 1.2rem
+      margin-bottom: -1px
+    .cc-tab-content
+      border: 1px solid $primary-color
+      padding: 3.5rem 1.2rem 0 1.2rem
+      .help
+        background-color: $secondary-color
+        color: #fff
+        border-radius: 1rem      
+        display: inline-block
+        width: 1.2rem
+        text-align: center
+        height: 1.2rem
+        float: right
+        position: absolute
+        right: 1rem
+        top: -1.7rem     
+        cursor: pointer
+  .disabled-form
+    label, label.active
+      color: $tertiary-color
+  .order-confirmation
+    font-size: 1.2rem
+    margin-bottom: 7rem
+    padding-bottom: 4rem
+    border-bottom: 1px solid $primary-color
+    table
+      margin-top: 2.5rem
+      thead
+        color: $tertiary-color
+        border-bottom: none
+        .product-image-header
+          width: 12rem
+        .product-name-header
+          width: 17rem
+      tbody
+        font-weight: 500
+        img
+          max-width: 12rem
+          border: 1px solid $primary-color        
+        .input-field
+          width: 4rem
+        .sku
+          color: $tertiary-color
+          font-weight: normal
+          font-size: 0.9rem
+    .summary
+      border-top: 1px solid $primary-color
+      ul li
+        margin-bottom: 1.3em
+        &.total
+          font-size: 1.5rem
+          font-weight: 600
+    .buttons
+      text-align: right
+      .cancel
+        background-color: $tertiary-color
+        color: #fff
+        margin-right: 2rem
+        
+.page-footer
+  padding-top: 0!important
+  .band
+    .row
+      margin-bottom: 0
+    h3
+      font-size: 1.8rem
+      color: #757575
+      margin-bottom: 0
+    ul
+      li
+        display: inline
+        color: $secondary-color
+        margin-right: 1rem
+        cursor: pointer
+        i
+          font-size: 4rem
+    input[type=text]
+      background-color: #fff
+      border: none
+      padding: 0 1rem 0 1rem
+      box-sizing: border-box
+    .btn
+      height: 2.9rem
+      padding-top: 0.3rem
+  .underfooter
+    padding-top: 4rem
+    background-color: #fff
+    .sublogo
+      font-size: 3rem
+      font-weight: 500
+      padding-top: 3rem
+    .links
+      h5
+        font-size: 1rem
+        color: #757575
+      a
+        color: #000
+        font-weight: 500
+        line-height: 2em
+    .copyright
+      color: #757575
+      font-size: 0.8rem
+      margin-top: 2rem
+
+  
